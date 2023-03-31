@@ -1,2 +1,4 @@
 <h1>Budget Calculator</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<p>You can use this tool to calculate your monthly budget</p>
+<input type="text" name="income" id="" />
+<label for="income">What is your monthly income?</label>
