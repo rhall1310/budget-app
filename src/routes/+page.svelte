@@ -15,28 +15,45 @@
 	}
 </script>
 
-<h1>Budget Calculator</h1>
-<p>You can use this tool to calculate your monthly budget</p>
-<div>
-	<p>What is your monthly income?</p>
-	{#each incomeCount as inc}
-		<label for="income">{inc}:</label>
-		<input type="text" name="income" bind:value={income} />
-	{/each}
-	<label for="add-income">Add another source of income</label>
-	<input type="text" name="add-income" placeholder="Income source" bind:value={newIncome} />
-	<button on:click={addIncome(newIncome)}>+</button>
-</div>
-<div>
+<main>
+	<h1>Budget Calculator</h1>
+	<p>You can use this tool to calculate your monthly budget</p>
 	<div>
-		<p>What is your monthly spending?</p>
-		{#each expendCount as exp}
-			<label for="income">{exp}:</label>
-			<input type="text" name="income" bind:value={income} />
+		<p>What is your monthly income?</p>
+		{#each incomeCount as inc, index}
+			<li>
+				{index + 1}.
+				<label for="income">{inc}:</label>
+				<input type="text" name="income" bind:value={income} />
+			</li>
 		{/each}
-		<label for="add-expend">Add another source of income</label>
-		<input type="text" name="add-expend" placeholder="Expenditure" bind:value={newExpend} />
-		<button on:click={addExpenditure(newExpend)}>+</button>
+
+		<input type="text" name="add-income" placeholder="Add income source" bind:value={newIncome} />
+		<button on:click={addIncome(newIncome)}>+</button>
 	</div>
-</div>
-<p>Your total savings are: {income - expend}</p>
+	<div>
+		<div>
+			<p>What is your monthly spending?</p>
+			{#each expendCount as exp, index}
+				<li>
+					{index + 1}.
+					<label for="income">{exp}:</label>
+					<input type="text" name="income" bind:value={income} />
+				</li>
+			{/each}
+
+			<input type="text" name="add-expend" placeholder="Add expenditure" bind:value={newExpend} />
+			<button on:click={addExpenditure(newExpend)}>+</button>
+		</div>
+	</div>
+	<p>Your total savings are: {income - expend}</p>
+</main>
+
+<style>
+	main {
+		margin: 1rem;
+	}
+	li {
+		list-style: none;
+	}
+</style>
