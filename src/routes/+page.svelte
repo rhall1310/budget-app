@@ -38,7 +38,7 @@
 				<li>
 					{index + 1}.
 					<label for="income">{exp}:</label>
-					<input type="text" name="income" bind:value={income} />
+					<input type="text" name="income" bind:value={expend} />
 				</li>
 			{/each}
 
