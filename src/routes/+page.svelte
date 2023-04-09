@@ -1,17 +1,24 @@
 <script>
-	export let expend;
-	export let newExpend;
-	export let expendCount = ['Rent'];
-	export let income;
 	export let newIncome;
-	export let incomeCount = ['Salary'];
+	export let income = [{ name: 'Salary', amount: 0 }];
 
-	function addIncome(name) {
-		incomeCount = [...incomeCount, name];
+	export let newExpend;
+	export let expend = [{ name: 'Rent', amount: 0 }];
+
+	function addIncome(newName) {
+		income = [...income, { name: newName, amount: 0 }];
 	}
 
-	function addExpenditure(name) {
-		expendCount = [...expendCount, name];
+	function addExpenditure(newName) {
+		expend = [...expend, { name: newName, amount: 0 }];
+	}
+
+	function calculateSum(array, property) {
+		const total = array.reduce((accumulator, object) => {
+			return accumulator + object[property];
+		}, 0);
+
+		return total;
 	}
 </script>
 
@@ -20,11 +27,11 @@
 	<p>You can use this tool to calculate your monthly budget</p>
 	<div>
 		<p>What is your monthly income?</p>
-		{#each incomeCount as inc, index}
+		{#each income as inc, index}
 			<li>
 				{index + 1}.
-				<label for="income">{inc}:</label>
-				<input type="text" name="income" bind:value={income} />
+				<label for="income">{inc.name}:</label>
+				<input type="text" name="income" bind:value={inc.amount} />
 			</li>
 		{/each}
 
@@ -34,16 +41,17 @@
 
 	<div>
 		<p>What is your monthly spending?</p>
-		{#each expendCount as exp, index}
+		{#each expend as exp, index}
 			<li>
 				{index + 1}.
-				<label for="income">{exp}:</label>
-				<input type="text" name="income" bind:value={expend} />
+				<label for="income">{exp.name}:</label>
+				<input type="text" name="income" bind:value={exp.amount} />
 			</li>
 		{/each}
 
 		<input type="text" name="add-expend" placeholder="Add expenditure" bind:value={newExpend} />
 		<button on:click={addExpenditure(newExpend)}>+</button>
+		<p>{calculateSum(expend, 'amount')}</p>
 	</div>
 
 	<p>Your total savings are: {income - expend}</p>
