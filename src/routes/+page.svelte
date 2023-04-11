@@ -2,12 +2,10 @@
 	export let newIncome;
 	export let income = [{ name: 'Salary', amount: 0 }];
 	export let newExpend;
-	export let expend = [
-		{ name: 'Rent', amount: 5 },
-		{ name: 'Blah', amount: 10 }
-	];
+	export let expend = [{ name: 'Rent', amount: 5 }];
 
 	$: totalExpend = expend.reduce((acc, expend) => acc + expend.amount, 0);
+	$: totalIncome = income.reduce((acc, income) => acc + income.amount, 0);
 
 	function addIncome(newName) {
 		income = [...income, { name: newName, amount: 0 }];
@@ -32,7 +30,7 @@
 		{/each}
 
 		<input type="text" name="add-income" placeholder="Add income source" bind:value={newIncome} />
-		<button on:click={addIncome(newIncome)}>+</button>
+		<button on:click={addIncome(newIncome)} disabled={!newIncome}>+</button>
 	</div>
 
 	<div>
@@ -46,11 +44,10 @@
 		{/each}
 
 		<input type="text" name="add-expend" placeholder="Add expenditure" bind:value={newExpend} />
-		<button on:click={addExpenditure(newExpend)}>+</button>
-		<p>{totalExpend}</p>
+		<button on:click={addExpenditure(newExpend)} disabled={!newExpend}>+</button>
 	</div>
 
-	<p>Your total savings are: {income - expend}</p>
+	<p>Your total savings are: {totalIncome - totalExpend}</p>
 </main>
 
 <style>
