@@ -3,6 +3,7 @@
 	export let income = [{ name: 'Salary', amount: 0 }];
 	export let newExpend;
 	export let expend = [{ name: 'Rent', amount: 5 }];
+	export let currency = '£';
 
 	$: totalExpend = expend.reduce((acc, expend) => acc + expend.amount, 0);
 	$: totalIncome = income.reduce((acc, income) => acc + income.amount, 0);
@@ -17,10 +18,14 @@
 </script>
 
 <main>
-	<h1>Budget Calculator</h1>
-	<p>You can use this tool to calculate your monthly budget</p>
+	<p>You can use this tool to calculate your monthly budget. Select a currency</p>
+	<select name="currency" id="currency-choice" bind:value={currency}>
+		<option value="£">£ GBP</option>
+		<option value="$">$ USD</option>
+		<option value="€">€ Euros</option></select
+	>
 	<div>
-		<p>What is your monthly income?</p>
+		<h2>What is your monthly income?</h2>
 		{#each income as inc, index}
 			<li>
 				{index + 1}.
@@ -34,7 +39,7 @@
 	</div>
 
 	<div>
-		<p>What is your monthly spending?</p>
+		<h2>What is your monthly spending?</h2>
 		{#each expend as exp, index}
 			<li>
 				{index + 1}.
@@ -47,7 +52,7 @@
 		<button on:click={addExpenditure(newExpend)} disabled={!newExpend}>+</button>
 	</div>
 
-	<p>Your total savings are: {totalIncome - totalExpend}</p>
+	<h2>Your total savings are: {currency}{totalIncome - totalExpend}</h2>
 </main>
 
 <style>
