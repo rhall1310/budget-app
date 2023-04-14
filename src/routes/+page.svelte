@@ -20,7 +20,7 @@
 <main>
 	<p>You can use this tool to calculate your monthly budget. Select a currency</p>
 	<select name="currency" id="currency-choice" bind:value={currency}>
-		<option value="£">£ GBP</option>
+		<option value="£"> GBP(£)</option>
 		<option value="$">$ USD</option>
 		<option value="€">€ Euros</option></select
 	>
