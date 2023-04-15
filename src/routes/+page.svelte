@@ -18,12 +18,13 @@
 </script>
 
 <main>
-	<p>You can use this tool to calculate your monthly budget. Select a currency</p>
+	<p>You can use this tool to calculate your monthly budget.</p>
 	<select name="currency" id="currency-choice" bind:value={currency}>
 		<option value="£"> GBP(£)</option>
 		<option value="$">$ USD</option>
 		<option value="€">€ Euros</option></select
 	>
+	<p>Select a currency</p>
 	<div>
 		<h2>What is your monthly income?</h2>
 		{#each income as inc, index}
