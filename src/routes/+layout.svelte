@@ -1,12 +1,17 @@
-<body>
-	<aside>
-		<h1><a href="/"> Budget Calculator</a></h1>
-		<nav>
-			<a href="/settings">Settings</a>
-			<a href="/about">About</a>
-		</nav>
-	</aside>
+<script>
+	import Sidebar from '../components/Sidebar.svelte';
+	let sidebar_show = false;
+</script>
 
+<body>
+	<header>
+		<aside>
+			<button on:click={() => (sidebar_show = !sidebar_show)}>Toggle Sidebar</button><Sidebar
+				bind:show={sidebar_show}
+			/>
+		</aside>
+		<h1><a href="/"> Budget Calculator</a></h1>
+	</header>
 	<main>
 		<slot />
 	</main>
@@ -18,18 +23,17 @@
 		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',
 			Geneva, Verdana, sans-serif;
 	}
-	aside {
-		background-color: rgb(112, 201, 201);
+	header {
 		display: flex;
-		align-items: center;
-		gap: 1rem;
+		background-color: aquamarine;
 	}
-	nav {
-		display: flex;
-		flex-direction: row;
-		gap: 1rem;
+	h1 {
+		text-align: center;
 	}
 	a {
 		text-decoration: none;
+	}
+	main {
+		margin-left: 20%;
 	}
 </style>
