@@ -23,8 +23,10 @@
 		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',
 			Geneva, Verdana, sans-serif;
 	}
+	aside {
+		position: fixed;
+	}
 	header {
-		display: flex;
 		background-color: aquamarine;
 	}
 	h1 {
@@ -32,8 +34,5 @@
 	}
 	a {
 		text-decoration: none;
-	}
-	main {
-		margin-left: 20%;
 	}
 </style>
