@@ -23,5 +23,7 @@
 		background: #fff;
 		overflow-y: auto;
 		width: 10rem;
+		display: flex;
+		flex-direction: column;
 	}
 </style>
