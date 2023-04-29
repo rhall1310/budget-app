@@ -1,6 +1,9 @@
 <script>
 	import Sidebar from '../components/Sidebar.svelte';
+	import Settings from '../components/Settings.svelte';
+
 	let sidebar_show = false;
+	let showSettings = false;
 </script>
 
 <body>
@@ -12,6 +15,9 @@
 		</aside>
 		<h1><a href="/"> Budget Calculator</a></h1>
 	</header>
+	<button on:click={() => (showSettings = true)}> show modal </button>
+	<Settings bind:showSettings />
+
 	<main>
 		<slot />
 	</main>
