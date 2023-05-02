@@ -1,26 +1,12 @@
 <script>
-	export let showSettings; // boolean
-
-	let dialog; // HTMLDialogElement
-
-	$: if (dialog && showSettings) dialog.showSettings();
 </script>
 
-<!-- svelte-ignore a11y-click-events-have-key-events -->
-<dialog
-	bind:this={dialog}
-	on:close={() => (showSettings = false)}
-	on:click|self={() => dialog.close()}
->
-	<div on:click|stopPropagation>
-		<slot name="header" />
-		<hr />
-		<slot />
-		<hr />
-		<!-- svelte-ignore a11y-autofocus -->
-		<button autofocus on:click={() => dialog.close()}>close modal</button>
-	</div>
-</dialog>
+<main>
+	<dialog>
+		Hello
+		<dialog />
+	</dialog>
+</main>
 
 <style>
 	dialog {
@@ -32,9 +18,7 @@
 	dialog::backdrop {
 		background: rgba(0, 0, 0, 0.3);
 	}
-	dialog > div {
-		padding: 1em;
-	}
+
 	dialog[open] {
 		animation: zoom 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 	}
