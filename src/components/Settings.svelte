@@ -3,7 +3,7 @@
 
 <main>
 	<dialog>
-		Hello
+		<p>Hello there</p>
 		<dialog />
 	</dialog>
 </main>
@@ -40,8 +40,5 @@
 		to {
 			opacity: 1;
 		}
-	}
-	button {
-		display: block;
 	}
 </style>

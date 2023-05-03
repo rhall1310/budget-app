@@ -2,21 +2,23 @@
 	import Sidebar from '../components/Sidebar.svelte';
 	import Settings from '../components/Settings.svelte';
 
-	let sidebar_show = false;
-	let showSettings = false;
+	let sidebarShow = false;
+	let showSettings = true;
 </script>
 
 <body>
 	<header>
 		<aside>
-			<button on:click={() => (sidebar_show = !sidebar_show)}>Toggle Sidebar</button><Sidebar
-				bind:show={sidebar_show}
+			<button on:click={() => (sidebarShow = !sidebarShow)}>Toggle Sidebar</button><Sidebar
+				bind:show={sidebarShow}
 			/>
 		</aside>
 		<h1><a href="/"> Budget Calculator</a></h1>
 	</header>
-	<button on:click={() => (showSettings = true)}> show modal </button>
-	<Settings bind:showSettings />
+	<button on:click={() => (showSettings = !showSettings)}> Show modal </button>
+	{#if showSettings}
+		<Settings />
+	{/if}
 
 	<main>
 		<slot />
