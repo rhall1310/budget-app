@@ -1,44 +1,18 @@
 <script>
+	export let show = false;
 </script>
 
 <main>
-	<dialog>
-		<p>Hello there</p>
-		<dialog />
-	</dialog>
+	<h1>Hello there</h1>
+	<button on:click={() => (show = !show)}>Close X</button>
 </main>
 
 <style>
-	dialog {
-		max-width: 32em;
-		border-radius: 0.2em;
-		border: none;
-		padding: 0;
-	}
-	dialog::backdrop {
-		background: rgba(0, 0, 0, 0.3);
-	}
-
-	dialog[open] {
-		animation: zoom 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-	}
-	@keyframes zoom {
-		from {
-			transform: scale(0.95);
-		}
-		to {
-			transform: scale(1);
-		}
-	}
-	dialog[open]::backdrop {
-		animation: fade 0.2s ease-out;
-	}
-	@keyframes fade {
-		from {
-			opacity: 0;
-		}
-		to {
-			opacity: 1;
-		}
+	main {
+		position: absolute;
+		width: 95%;
+		height: 95%;
+		top: 1rem;
+		background-color: antiquewhite;
 	}
 </style>

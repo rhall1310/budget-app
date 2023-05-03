@@ -3,10 +3,13 @@
 	import Settings from '../components/Settings.svelte';
 
 	let sidebarShow = false;
-	let showSettings = true;
+	let showSettings = false;
 </script>
 
 <body>
+	{#if showSettings}
+		<Settings bind:show={showSettings} />
+	{/if}
 	<header>
 		<aside>
 			<button on:click={() => (sidebarShow = !sidebarShow)}>Toggle Sidebar</button><Sidebar
@@ -16,9 +19,6 @@
 		<h1><a href="/"> Budget Calculator</a></h1>
 	</header>
 	<button on:click={() => (showSettings = !showSettings)}> Show modal </button>
-	{#if showSettings}
-		<Settings />
-	{/if}
 
 	<main>
 		<slot />
