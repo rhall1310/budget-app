@@ -1,4 +1,5 @@
 <script>
+	import { settings } from '../store.js';
 	export let show = false;
 </script>
 
@@ -6,6 +7,12 @@
 	<div>
 		<button on:click={() => (show = !show)}>Close X</button>
 		<h1>Hello there</h1>
+		<select name="period" id="" bind:value={$settings.period}>
+			<option value="monthly">Monthly</option>
+			<option value="annual">Annual</option>
+		</select>
+		<input type="checkbox" name="darkMode" id="d" bind:value={$settings.darkMode} />
+		<label for="darkMode">Dark mode?</label>
 	</div>
 </main>
 

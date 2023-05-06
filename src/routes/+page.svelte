@@ -4,10 +4,8 @@
 	export let newExpend;
 	export let expend = [{ name: 'Rent', amount: 5 }];
 	export let currency = '£';
-	export let settings = {
-		timeRange: 'monthly',
-		darkMode: false
-	};
+
+	import { settings } from '../store.js';
 
 	$: totalExpend = expend.reduce((acc, expend) => acc + expend.amount, 0);
 	$: totalIncome = income.reduce((acc, income) => acc + income.amount, 0);
@@ -22,7 +20,7 @@
 </script>
 
 <main>
-	<p>You can use this tool to calculate your {settings.timeRange} budget.</p>
+	<p>You can use this tool to calculate your {$settings.period} budget.</p>
 	<select name="currency" id="currency-choice" bind:value={currency}>
 		<option value="£"> GBP(£)</option>
 		<option value="$">$ USD</option>
@@ -30,7 +28,7 @@
 	>
 	<p>Select a currency</p>
 	<div>
-		<h2>What is your {settings.timeRange} income?</h2>
+		<h2>What is your {$settings.period} income?</h2>
 		{#each income as inc, index}
 			<li>
 				{index + 1}.
@@ -44,7 +42,7 @@
 	</div>
 
 	<div>
-		<h2>What is your {settings.timeRange} spending?</h2>
+		<h2>What is your {$settings.period} spending?</h2>
 		{#each expend as exp, index}
 			<li>
 				{index + 1}.
