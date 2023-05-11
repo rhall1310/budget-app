@@ -69,4 +69,7 @@
 	input {
 		margin: 0.2rem;
 	}
+	h2 {
+		color: rgb(8, 96, 95);
+	}
 </style>

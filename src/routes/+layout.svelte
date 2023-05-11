@@ -14,11 +14,11 @@
 		<aside>
 			<button on:click={() => (sidebarShow = !sidebarShow)}>Toggle Sidebar</button><Sidebar
 				bind:show={sidebarShow}
+				bind:showSettings
 			/>
 		</aside>
 		<h1><a href="/"> Budget Calculator</a></h1>
 	</header>
-	<button on:click={() => (showSettings = !showSettings)}> Show modal </button>
 
 	<main>
 		<slot />
@@ -35,12 +35,17 @@
 		position: fixed;
 	}
 	header {
-		background-color: aquamarine;
+		background-color: rgb(51, 215, 209);
 	}
+
 	h1 {
 		text-align: center;
+		margin: 0;
 	}
 	a {
 		text-decoration: none;
+	}
+	button {
+		background-color: rgb(255, 186, 73);
 	}
 </style>

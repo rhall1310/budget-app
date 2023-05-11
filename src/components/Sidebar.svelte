@@ -2,12 +2,13 @@
 	import { fly } from 'svelte/transition';
 
 	export let show = false;
+	export let showSettings = false;
 </script>
 
 {#if show}
 	<nav transition:fly={{ x: -250, opacity: 1 }}>
 		<button on:click={() => (show = !show)}>Close X</button>
-		<a href="/settings">Settings</a>
+		<button on:click={() => (showSettings = !showSettings)}>Settings</button>
 		<a href="/about">About</a>
 	</nav>
 {/if}
@@ -20,7 +21,7 @@
 		height: 100%;
 		padding: 2rem 1rem 0.6rem;
 		border-left: 1px solid #aaa;
-		background: #fff;
+		background: rgb(255, 186, 73);
 		overflow-y: auto;
 		width: 10rem;
 		display: flex;
