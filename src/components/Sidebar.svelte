@@ -2,13 +2,12 @@
 	import { fly } from 'svelte/transition';
 
 	export let show = false;
-	export let showSettings = false;
 </script>
 
 {#if show}
 	<nav transition:fly={{ x: -250, opacity: 1 }}>
 		<button on:click={() => (show = !show)}>Close X</button>
-		<button on:click={() => (showSettings = !showSettings)}>Settings</button>
+		<button>Settings</button>
 		<a href="/about">About</a>
 	</nav>
 {/if}
