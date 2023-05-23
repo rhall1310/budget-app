@@ -6,6 +6,9 @@
 </script>
 
 <body>
+	<dialog>
+		<div />
+	</dialog>
 	<header>
 		<aside>
 			<button on:click={() => (sidebarShow = !sidebarShow)}>Toggle Sidebar</button><Sidebar
