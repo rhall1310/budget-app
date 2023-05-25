@@ -1,19 +1,24 @@
 <script>
 	import Sidebar from '../components/Sidebar.svelte';
 	import { settings } from '../store.js';
+	import Modal from '../components/Modal.svelte';
+	let modal;
 
 	let sidebarShow = false;
 </script>
 
 <body>
-	<dialog>
-		<div />
-	</dialog>
+	<Modal bind:this={modal}>
+		<h2>Modal title</h2>
+		<p>Modal content.</p>
+		<button on:click={() => modal.hide()}>Close</button>
+	</Modal>
 	<header>
 		<aside>
 			<button on:click={() => (sidebarShow = !sidebarShow)}>Toggle Sidebar</button><Sidebar
 				bind:show={sidebarShow}
 			/>
+			<button on:click={() => modal.show()}>Show modal</button>
 		</aside>
 		<h1><a href="/"> Budget Calculator</a></h1>
 	</header>
