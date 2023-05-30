@@ -41,6 +41,7 @@
 		max-width: 80vw;
 		padding: 1rem;
 		margin: 15% auto;
+		z-index: 10;
 	}
 	.close {
 		float: right;
