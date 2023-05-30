@@ -1,7 +1,9 @@
 <script>
 	let shown = false;
-	export function show() {
+	export let modalContent;
+	export function show(c) {
 		shown = true;
+		modalContent = c;
 	}
 	export function hide() {
 		shown = false;
@@ -34,6 +36,7 @@
 		height: 100%;
 		top: 0;
 		left: 0;
+		z-index: 10;
 	}
 
 	.modal {
@@ -41,7 +44,6 @@
 		max-width: 80vw;
 		padding: 1rem;
 		margin: 15% auto;
-		z-index: 10;
 	}
 	.close {
 		float: right;
