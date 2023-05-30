@@ -1,7 +1,8 @@
 <script>
 	import { fly } from 'svelte/transition';
-	import Modal from '../components/Modal.svelte';
+	import Modal from './Modal.svelte';
 	import Settings from './Settings.svelte';
+	import About from './About.svelte';
 	let modal;
 
 	let modalContent;
@@ -15,9 +16,9 @@
 {#if show}
 	<nav transition:fly={{ x: -250, opacity: 1 }}>
 		<button on:click={() => (show = !show)}>Close X</button>
-		<button>Settings</button>
-		<button on:click={() => modal.show(Settings)}>Show modal</button>
-		<a href="/about">About</a>
+
+		<button on:click={() => modal.show(Settings)}>Settings</button>
+		<button on:click={() => modal.show(About)}>About</button>
 	</nav>
 {/if}
 
