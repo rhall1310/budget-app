@@ -43,15 +43,6 @@
 	button {
 		background-color: rgb(255, 186, 73);
 	}
-	select {
-		margin: 1rem;
-	}
-
-	.settings-rows {
-		display: flex;
-		flex-direction: row;
-		padding: 1rem;
-	}
 
 	button {
 		align-self: flex-end;

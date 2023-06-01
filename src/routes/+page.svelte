@@ -5,7 +5,7 @@
 	export let expend = [{ name: 'Rent', amount: 5 }];
 	export let currency = '£';
 
-	import { settings } from '../store.js';
+	import { settings, styling } from '../store.js';
 
 	$: totalExpend = expend.reduce((acc, expend) => acc + expend.amount, 0);
 	$: totalIncome = income.reduce((acc, income) => acc + income.amount, 0);
@@ -19,7 +19,7 @@
 	}
 </script>
 
-<main>
+<main style="color: {$styling.themeColor}">
 	<p>You can use this tool to calculate your {$settings.period} budget.</p>
 	<select name="currency" id="currency-choice" bind:value={currency}>
 		<option value="£"> GBP(£)</option>
@@ -70,6 +70,5 @@
 		margin: 0.2rem;
 	}
 	h2 {
-		color: rgb(8, 96, 95);
 	}
 </style>
