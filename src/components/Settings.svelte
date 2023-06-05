@@ -1,26 +1,19 @@
 <script>
-	import { settings, styling } from '../store.js';
-
-	let color = '#FF0000';
-
-	function toggleDarkMode() {
-		$styling.themeColor = 'rgb(0, 0, 0)';
-		console.log($styling.themeColor);
-	}
+	import { settings } from '../store.js';
 </script>
 
-<div style="--theme-color: {color}">
+<div>
 	<h1>Settings</h1>
 	<label for="period">Select a time period</label>
 	<select name="period" id="period" bind:value={$settings.period}>
 		<option value="monthly">Monthly</option>
 		<option value="yearly">Yearly</option>
 	</select>
-	<button on:click={toggleDarkMode}>Dark mode</button>
+	<input type="checkbox" name="" id="" bind:value={$settings.darkMode} />
 </div>
 
 <style global>
 	h1 {
-		color: black;
+		background-color: var(--backgroundColor);
 	}
 </style>
