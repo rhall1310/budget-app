@@ -1,1 +1,1 @@
-<main>About</main>
+<main />
