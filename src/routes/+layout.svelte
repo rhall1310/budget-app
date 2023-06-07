@@ -4,13 +4,12 @@
 
 	let sidebarShow = false;
 	let dark = false;
-	const toggleTheme = () => (dark = dark === false);
 </script>
 
 <svelte:head>
 	{#if dark}
-		<link rel="stylesheet" href="src\global.css" />
-	{:else}<link rel="stylesheet" href="src\dark-mode.css" />{/if}
+		<link rel="stylesheet" href="src\dark-mode.css" />
+	{:else}<link rel="stylesheet" href="src\global.css" />{/if}
 </svelte:head>
 <body>
 	<header>
@@ -23,11 +22,37 @@
 	</header>
 
 	<main>
-		<button on:click={toggleTheme}> toggle theme </button>
+		<input type="checkbox" name="" id="dark=mode" bind:checked={dark} />
 
 		<slot />
 	</main>
 </body>
 
 <style>
+	body {
+		margin: 0;
+		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',
+			Geneva, Verdana, sans-serif;
+	}
+	aside {
+		position: fixed;
+	}
+
+	h1 {
+		text-align: center;
+		margin: 0;
+	}
+	a {
+		text-decoration: none;
+	}
+	button {
+		background-color: rgb(255, 186, 73);
+	}
+
+	button {
+		align-self: flex-end;
+	}
+	h1 {
+		color: rgb(8, 96, 95);
+	}
 </style>
