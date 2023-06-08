@@ -3,11 +3,11 @@
 	import { settings } from '../store.js';
 
 	let sidebarShow = false;
-	let dark = false;
+	let dark = $settings.darkMode;
 </script>
 
 <svelte:head>
-	{#if dark}
+	{#if $settings.darkMode}
 		<link rel="stylesheet" href="src\dark-mode.css" />
 	{:else}<link rel="stylesheet" href="src\global.css" />{/if}
 </svelte:head>
@@ -22,8 +22,6 @@
 	</header>
 
 	<main>
-		<input type="checkbox" name="" id="dark=mode" bind:checked={dark} />
-
 		<slot />
 	</main>
 </body>
