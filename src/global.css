@@ -2,12 +2,11 @@ body {
 	background: white;
 }
 
-header {
+header,
+nav {
 	background-color: rgb(51, 215, 209);
 }
-nav {
-	background: rgb(255, 186, 73);
-}
+
 .settings,
 .modal {
 	background: white;

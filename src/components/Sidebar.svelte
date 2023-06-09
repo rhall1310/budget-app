@@ -3,6 +3,7 @@
 	import Modal from './Modal.svelte';
 	import Settings from './Settings.svelte';
 	import About from './About.svelte';
+
 	let modal;
 
 	let modalContent;
@@ -15,7 +16,6 @@
 {#if show}
 	<nav transition:fly={{ x: -250, opacity: 1 }}>
 		<button on:click={() => (show = !show)}>Close X</button>
-
 		<button on:click={() => modal.show(Settings)}>Settings</button>
 		<button on:click={() => modal.show(About)}>About</button>
 	</nav>
@@ -34,5 +34,13 @@
 		display: flex;
 		flex-direction: column;
 		z-index: 1;
+		box-shadow: 3px 1px rgb(8, 96, 95);
+	}
+	nav button {
+		background: rgb(255, 186, 73);
+
+		padding: 0.4rem;
+		margin: 0.2rem;
+		border-radius: 1rem;
 	}
 </style>

@@ -14,7 +14,7 @@
 <body>
 	<header>
 		<aside>
-			<button on:click={() => (sidebarShow = !sidebarShow)}>Toggle Sidebar</button><Sidebar
+			<button on:click={() => (sidebarShow = !sidebarShow)} class="hamburger">|||</button><Sidebar
 				bind:show={sidebarShow}
 			/>
 		</aside>
@@ -50,5 +50,8 @@
 	}
 	h1 {
 		color: rgb(8, 96, 95);
+	}
+	.hamburger {
+		font-size: larger;
 	}
 </style>
