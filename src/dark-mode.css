@@ -1,3 +1,17 @@
-header {
+body {
 	background-color: black;
+	color: white;
+}
+
+.settings,
+.modal,
+nav,
+aside,
+header {
+	background: darkblue;
+	color: white;
+}
+a {
+	text-decoration: none;
+	color: white;
 }

@@ -11,7 +11,6 @@
 
 <Modal bind:this={modal} bind:modalContent>
 	<svelte:component this={modalContent} />
-	<button on:click={() => modal.hide()}>Close</button>
 </Modal>
 {#if show}
 	<nav transition:fly={{ x: -250, opacity: 1 }}>
@@ -30,7 +29,6 @@
 		height: 100%;
 		padding: 2rem 1rem 0.6rem;
 		border-left: 1px solid #aaa;
-		background: rgb(255, 186, 73);
 		overflow-y: auto;
 		width: 10rem;
 		display: flex;

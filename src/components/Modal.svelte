@@ -40,7 +40,6 @@
 	}
 
 	.modal {
-		background-color: white;
 		max-width: 80vw;
 		padding: 1rem;
 		margin: 15% auto;

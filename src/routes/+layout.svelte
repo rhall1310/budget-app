@@ -40,9 +40,7 @@
 		text-align: center;
 		margin: 0;
 	}
-	a {
-		text-decoration: none;
-	}
+
 	button {
 		background-color: rgb(255, 186, 73);
 	}
