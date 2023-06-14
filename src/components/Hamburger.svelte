@@ -11,22 +11,16 @@
 
 <style>
 	.hamburger {
-		top: 4em;
-		right: 2em;
-		margin-left: -2em;
-		margin-top: -45px;
-		width: 2em;
-		height: 45px;
-		z-index: 2;
+		z-index: 5;
 		cursor: pointer;
 	}
 
 	.hamburger div {
 		position: relative;
-		width: 3em;
-		height: 7px;
+		width: 2em;
+		height: 5px;
 		border-radius: 3px;
-		background-color: #ab3516;
+		background-color: rgb(255, 186, 73);
 		margin-top: 8px;
 		transition: transform 0.3s ease-in-out;
 	}
@@ -46,6 +40,6 @@
 	}
 	#toggler:checked + .hamburger .meat {
 		transform: rotate(45deg);
-		margin-top: -7px;
+		margin-top: -5px;
 	}
 </style>

@@ -14,7 +14,6 @@
 <body>
 	<header>
 		<aside>
-			<Hamburger bind:open={sidebarShow} />
 			<Sidebar bind:show={sidebarShow} />
 		</aside>
 		<h1><a href="/"> Budget Calculator</a></h1>
@@ -40,17 +39,7 @@
 		margin: 0;
 	}
 
-	button {
-		background-color: rgb(255, 186, 73);
-	}
-
-	button {
-		align-self: flex-end;
-	}
 	h1 {
 		color: rgb(8, 96, 95);
-	}
-	.hamburger {
-		font-size: larger;
 	}
 </style>

@@ -3,6 +3,7 @@
 	import Modal from './Modal.svelte';
 	import Settings from './Settings.svelte';
 	import About from './About.svelte';
+	import Hamburger from './Hamburger.svelte';
 
 	let modal;
 
@@ -13,9 +14,10 @@
 <Modal bind:this={modal} bind:modalContent>
 	<svelte:component this={modalContent} />
 </Modal>
+<Hamburger bind:open={show} />
 {#if show}
 	<nav transition:fly={{ x: -250, opacity: 1 }}>
-		<button on:click={() => (show = !show)}>Close X</button>
+		<Hamburger bind:open={show} />
 		<button on:click={() => modal.show(Settings)}>Settings</button>
 		<button on:click={() => modal.show(About)}>About</button>
 	</nav>
