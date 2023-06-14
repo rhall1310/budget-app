@@ -1,9 +1,9 @@
 <script>
+	import Hamburger from '../components/Hamburger.svelte';
 	import Sidebar from '../components/Sidebar.svelte';
 	import { settings } from '../store.js';
 
 	let sidebarShow = false;
-	let dark = $settings.darkMode;
 </script>
 
 <svelte:head>
@@ -14,9 +14,8 @@
 <body>
 	<header>
 		<aside>
-			<button on:click={() => (sidebarShow = !sidebarShow)} class="hamburger">|||</button><Sidebar
-				bind:show={sidebarShow}
-			/>
+			<Hamburger bind:open={sidebarShow} />
+			<Sidebar bind:show={sidebarShow} />
 		</aside>
 		<h1><a href="/"> Budget Calculator</a></h1>
 	</header>
