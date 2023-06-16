@@ -17,7 +17,9 @@
 <Hamburger bind:open={show} />
 {#if show}
 	<nav transition:fly={{ x: -250, opacity: 1 }}>
-		<Hamburger bind:open={show} />
+		<div class="burger">
+			<Hamburger bind:open={show} />
+		</div>
 		<button on:click={() => modal.show(Settings)}>Settings</button>
 		<button on:click={() => modal.show(About)}>About</button>
 	</nav>
@@ -29,7 +31,7 @@
 		top: 0;
 		left: 0;
 		height: 100%;
-		padding: 2rem 1rem 0.6rem;
+		padding: 0rem 1rem 0.6rem;
 		border-left: 1px solid #aaa;
 		overflow-y: auto;
 		width: 10rem;
@@ -44,5 +46,9 @@
 		padding: 0.4rem;
 		margin: 0.2rem;
 		border-radius: 1rem;
+	}
+	.burger {
+		align-self: flex-end;
+		padding-bottom: 1rem;
 	}
 </style>
