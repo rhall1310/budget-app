@@ -41,8 +41,6 @@
 		box-shadow: 3px 1px rgb(8, 96, 95);
 	}
 	nav button {
-		background: rgb(255, 186, 73);
-
 		padding: 0.4rem;
 		margin: 0.2rem;
 		border-radius: 1rem;

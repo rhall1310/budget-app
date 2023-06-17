@@ -1,17 +1,24 @@
-body {
-	background-color: black;
-	color: white;
+:root {
+	--dark-bg-color: #2a2d34;
+	--header-color: #0f8b8d;
+	--element-color: rgb(255, 186, 73);
 }
-
+body {
+	background-color: var(--dark-bg-color);
+	color: var(--element-color);
+}
 .settings,
-.modal,
-nav,
-aside,
-header {
-	background: darkblue;
-	color: white;
+.modal {
+	background: var(--dark-bg-color);
 }
 a {
 	text-decoration: none;
-	color: white;
+}
+
+button {
+	background-color: var(--element-color);
+}
+
+nav button {
+	background-color: var(--element-color);
 }

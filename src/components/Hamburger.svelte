@@ -20,7 +20,7 @@
 		width: 2em;
 		height: 5px;
 		border-radius: 3px;
-		background-color: rgb(255, 186, 73);
+		background-color: black;
 		margin-top: 6px;
 		transition: transform 0.3s ease-in-out;
 		margin: 6px 6px 0 6px;

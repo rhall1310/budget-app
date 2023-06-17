@@ -1,18 +1,33 @@
+:root {
+	--main-bg-color: #f7f4ea;
+	--header-color: #23e3e7;
+	--element-color: rgb(255, 186, 73);
+}
+
 body {
-	background: white;
+	background: var(--main-bg-color);
+	color: black;
 }
 
 header,
 nav {
-	background-color: rgb(51, 215, 209);
+	background-color: var(--header-color);
 }
 
 .settings,
 .modal {
-	background: white;
-	color: black;
+	background: var(--main-bg-color);
 }
 a {
 	text-decoration: none;
-	color: rgb(8, 96, 95);
+	color: black;
+}
+
+button {
+	background-color: var(--header-color);
+	color: black;
+}
+
+nav button {
+	background-color: var(--main-bg-color);
 }
