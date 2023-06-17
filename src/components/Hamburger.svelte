@@ -20,7 +20,7 @@
 		width: 2em;
 		height: 5px;
 		border-radius: 3px;
-		background-color: black;
+		background-color: var(--dark-bg-color);
 		margin-top: 6px;
 		transition: transform 0.3s ease-in-out;
 		margin: 6px 6px 0 6px;

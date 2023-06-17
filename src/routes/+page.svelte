@@ -31,8 +31,10 @@
 		<h2>What is your {$settings.period} income?</h2>
 		{#each income as inc, index}
 			<li>
-				{index + 1}.
-				<label for="income">{inc.name}:</label>
+				<div>
+					{index + 1}.
+					<label for="income">{inc.name}:</label>
+				</div>
 				<input type="number" name="income" bind:value={inc.amount} />
 			</li>
 		{/each}
@@ -45,8 +47,10 @@
 		<h2>What is your {$settings.period} spending?</h2>
 		{#each expend as exp, index}
 			<li>
-				{index + 1}.
-				<label for="income">{exp.name}:</label>
+				<div>
+					{index + 1}.
+					<label for="income">{exp.name}:</label>
+				</div>
 				<input type="number" name="income" bind:value={exp.amount} />
 			</li>
 		{/each}
@@ -62,13 +66,22 @@
 	main {
 		margin: 1rem;
 	}
+	p {
+		text-align: justify;
+	}
 	li {
 		list-style: none;
+		display: flex;
+		flex-direction: column;
 	}
 
 	input {
 		margin: 0.2rem;
+		max-width: fit-content;
 	}
 	h2 {
+	}
+
+	@media only screen and (min-width: 600px) {
 	}
 </style>

@@ -2,6 +2,7 @@
 	--main-bg-color: #f7f4ea;
 	--header-color: #23e3e7;
 	--element-color: rgb(255, 186, 73);
+	--dark-bg-color: #2a2d34;
 }
 
 body {
@@ -17,6 +18,7 @@ nav {
 .settings,
 .modal {
 	background: var(--main-bg-color);
+	color: black;
 }
 a {
 	text-decoration: none;

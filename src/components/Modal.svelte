@@ -51,4 +51,7 @@
 	.close:hover {
 		font-weight: bold;
 	}
+	span {
+		font-size: xx-large;
+	}
 </style>
