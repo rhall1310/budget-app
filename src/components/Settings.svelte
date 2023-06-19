@@ -18,14 +18,9 @@
 </div>
 
 <style>
-	h1 {
-		background-color: var(--backgroundColor);
-	}
 	.settings {
 		display: flex;
 		flex-direction: column;
-		background: var(--main-bg-color);
-		color: black;
 	}
 	.settings-row {
 		margin-bottom: 1rem;
