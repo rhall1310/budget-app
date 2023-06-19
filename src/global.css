@@ -1,35 +1,32 @@
 :root {
 	--main-bg-color: #f7f4ea;
-	--header-color: #23e3e7;
+	--header-color: #109193;
 	--element-color: rgb(255, 186, 73);
 	--dark-bg-color: #2a2d34;
 }
-
 body {
-	background: var(--main-bg-color);
-	color: black;
+	background-color: var(--dark-bg-color);
+	color: var(--element-color);
 }
-
 header,
 nav {
 	background-color: var(--header-color);
+	color: var(--element-color);
 }
-
 .settings,
 .modal {
-	background: var(--main-bg-color);
-	color: black;
+	background: var(--dark-bg-color);
+	color: var(--element-color);
 }
 a {
 	text-decoration: none;
-	color: black;
+	color: var(--dark-bg-color);
 }
 
 button {
-	background-color: var(--header-color);
-	color: black;
+	background-color: var(--element-color);
 }
 
 nav button {
-	background-color: var(--main-bg-color);
+	background-color: var(--element-color);
 }

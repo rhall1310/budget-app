@@ -1,6 +1,6 @@
 <script>
 	import Sidebar from '../components/Sidebar.svelte';
-	import { settings } from '../store.js';
+
 	import '../global.css';
 
 	let sidebarShow = false;
