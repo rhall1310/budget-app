@@ -8,8 +8,8 @@
 
 <svelte:head>
 	{#if $settings.darkMode}
-		<link rel="stylesheet" href="src\dark-mode.css" />
-	{:else}<link rel="stylesheet" href="src\global.css" />{/if}
+		<link rel="stylesheet" href="assets\dark-mode.css" />
+	{:else}<link rel="stylesheet" href="assets\global.css" />{/if}
 </svelte:head>
 <body>
 	<header>
