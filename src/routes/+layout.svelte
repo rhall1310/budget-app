@@ -1,15 +1,13 @@
 <script>
 	import Sidebar from '../components/Sidebar.svelte';
 	import { settings } from '../store.js';
+	import '../global.css';
 
 	let sidebarShow = false;
 </script>
 
-<svelte:head>
-	{#if $settings.darkMode}
-		<link rel="stylesheet" href="\src\dark-mode.css" />
-	{:else}<link rel="stylesheet" href="\src\global.css" />{/if}
-</svelte:head>
+<svelte:head />
+
 <body>
 	<header>
 		<aside>
@@ -23,7 +21,7 @@
 	</main>
 </body>
 
-<style>
+<style global>
 	body {
 		margin: 0;
 		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',
