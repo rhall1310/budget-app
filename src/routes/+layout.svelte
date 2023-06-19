@@ -7,7 +7,7 @@
 
 <svelte:head>
 	{#if $settings.darkMode}
-		<link rel="stylesheet" href="\src\dark-mode.css" />src\dark-mode.css
+		<link rel="stylesheet" href="\src\dark-mode.css" />
 	{:else}<link rel="stylesheet" href="\src\global.css" />{/if}
 </svelte:head>
 <body>
