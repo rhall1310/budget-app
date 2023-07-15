@@ -3,6 +3,8 @@
 	--header-color: #109193;
 	--element-color: rgb(255, 186, 73);
 	--dark-bg-color: #2a2d34;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
+		sans-serif;
 }
 body {
 	background-color: var(--dark-bg-color);
